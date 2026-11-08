@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f7fb"><meta name="description" content="StudyMate — find partners for projects and exam preparation at AITU.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css">
+<title>StudyMate — Better Together | AITU</title>
+</head><body>
+<header class="header">
+  <div class="header-inner">
+    <button class="brand" id="brand-btn" type="button" aria-label="Home"><span class="brand-icon">✳</span><span>study<span class="brand-accent">mate</span><small>BY STUDENTS · FOR STUDENTS</small></span></button>
+    <div class="header-actions"><span class="campus-label"><span class="campus-dot"></span> AITU COMMUNITY</span><div id="guest-actions" class="inline"><button id="login-top" class="btn btn-ghost">Sign in</button><button id="signup-top" class="btn btn-primary btn-small">Sign up <span>↗</span></button></div><div id="user-actions" class="inline" hidden><button class="avatar-button" id="avatar-btn" aria-label="Profile">A</button></div></div>
+  </div>
+</header>
+<main>
+<section id="landing" class="landing">
+ <div class="hero container">
+  <div class="hero-left"><div class="eyebrow"><span class="sparkle">✦</span> YOUR AITU COMMUNITY <span class="eyebrow-stroke"></span></div>
+   <h1>Big goals.<br><em>Together</em> is better.</h1>
+   <p class="hero-copy">Projects, group assignments, midterms and endterms — find students who share your goals.</p>
+   <div class="hero-cta"><button class="btn btn-primary btn-xl" id="hero-start">Find your StudyMate <span>↗</span></button><span class="safe-note">✧ For AITU students only</span></div>
+   <div class="hero-bottom"><div class="mini-avatars"><span>AS</span><span>DN</span><span>AO</span><span>ME</span></div><p><strong>Studying is a team effort.</strong><br>Find your people.</p></div>
+  </div>
+  <div class="hero-right" aria-hidden="true"><div class="hero-oval"></div><div class="circle circle-one">✳</div><div class="circle circle-two">✺</div><div class="floating-pill top-pill"><span class="pill-glow"></span> ON THE SAME WAVELENGTH</div>
+    <div class="preview-card preview-back"><div class="preview-head"><span class="preview-icon">◈</span> MIDTERM PREP <span class="preview-dots">•••</span></div><h3>Calculus I</h3><p>Making hard topics easier together.</p><div class="preview-footer"><span>✳ Online</span><b>02 / 04</b></div></div>
+    <div class="preview-card preview-front"><div class="preview-head"><span class="preview-icon purple">✿</span> TEAM PROJECT <span class="preview-dots">•••</span></div><h3>Web Technologies</h3><p>Looking for a team for an exciting project!</p><div class="preview-avatar-row"><span class="bubble a">A</span><span class="bubble b">D</span><span class="bubble c">+</span><strong>2 spots left</strong></div><div class="preview-footer"><span>↗ AITU COMMUNITY</span><b>OPEN</b></div></div>
+   </div>
+ </div>
+ <div class="steps-band"><div class="container steps-layout"><span>ONE CAMPUS.<br><strong>MORE CONNECTIONS.</strong></span><div><strong>01</strong><p>Sign up with your AITU email</p></div><div><strong>02</strong><p>Find a subject or create a post</p></div><div><strong>03</strong><p>Team up and achieve more</p></div></div></div>
+ <section class="features container"><div class="section-kicker">WHAT YOU CAN DO <span>✴</span></div><h2>Your university.<br><span>Your team.</span></h2><div class="feature-grid"><article><span class="feature-icon tint-purple"><img src="/assets/icon-team.svg" alt="" width="38" height="38"></span><h3>Team projects</h3><p>Build a strong team for group projects and lab assignments.</p></article><article><span class="feature-icon tint-orange"><img src="/assets/icon-exam.svg" alt="" width="38" height="38"></span><h3>Midterm & Endterm</h3><p>Review topics, solve problems and prepare for exams together.</p></article><article><span class="feature-icon tint-green"><img src="/assets/icon-help.svg" alt="" width="38" height="38"></span><h3>Help with subjects</h3><p>Find someone who can help, or share what you know.</p></article></div></section>
+ <section class="app-gallery container" aria-labelledby="gallery-title">
+  <div class="section-kicker">A LOOK INSIDE <span aria-hidden="true">✳</span></div>
+  <h2 id="gallery-title">See StudyMate <span>in action.</span></h2>
+  <p class="gallery-intro">Explore study posts, find teammates and create a request in just a few clicks.</p>
+  <div class="gallery-grid">
+    <figure class="gallery-card reveal-up"><img src="/assets/dashboard-preview.webp" width="840" height="558" loading="eager" decoding="async" alt="StudyMate dashboard showing filters and student study partner requests."><figcaption>Browse study partners</figcaption></figure>
+    <figure class="gallery-card reveal-up"><img src="/assets/create-preview.webp" width="840" height="558" loading="eager" decoding="async" alt="StudyMate form for creating a new study partner post."><figcaption>Create your own post</figcaption></figure>
+  </div>
+ </section>
+ </section>
+ <section id="dashboard" class="dashboard" hidden>
+  <div class="container"><div class="dash-heading"><div><div class="section-kicker">YOUR STUDY SPACE <span>✳</span></div><h1 id="dash-title">Find your team<span class="orange-period">.</span></h1><p id="dash-subtitle">Meet new people and study alongside fellow AITU students.</p></div><button id="new-post-main" class="btn btn-primary">+ Create post</button></div>
+    <div class="stats-grid"><div class="stat-card"><span>Active posts</span><strong id="stat-posts">—</strong><span class="stat-mark">↗</span></div><div class="stat-card"><span>Community members</span><strong id="stat-users">—</strong><span class="stat-mark">✳</span></div><div class="stat-card"><span>Accepted applications</span><strong id="stat-connections">—</strong><span class="stat-mark">✦</span></div></div>
+    <section class="analytics-panel" aria-label="StudyMate statistics based on demo data">
+      <div class="analytics-heading"><h2>Community analytics</h2><small>Aggregated synthetic demo records from SQLite</small></div>
+      <div class="analytics-cols"><div><h3>Most requested subjects (posts)</h3><div id="analytics-subjects"></div></div>
+      <div><h3>Posts by purpose</h3><div id="analytics-categories"></div></div>
+      <div><h3>Application outcomes</h3><div id="analytics-applications"></div></div></div>
+    </section>
+    <div class="content-shell"><aside class="sidebar"><div class="side-title">NAVIGATION</div><button class="side-button selected" data-section="explore">◈ <span>All posts</span></button><button class="side-button" data-section="mine">▤ <span>My posts</span></button><button class="side-button" data-section="received">✉ <span>Received applications</span></button><button class="side-button" data-section="sent">↗ <span>My applications</span></button><button class="side-button" data-section="chats">▣ <span>Chats</span> <span id="sidebar-chat-badge" class="side-chat-count" hidden>0</span></button><button class="side-button" id="moderation-nav" data-section="moderation" hidden>⚑ <span>Moderation</span></button><div class="side-divider"></div><div class="side-help"><span class="side-help-icon">✳</span><b>Have an idea?</b><p>Describe who you are looking for and find your team!</p><button id="side-create">Create post →</button></div></aside>
+    <div class="main-column"><div id="feed-controls"><div class="feed-topline"><div><h2 id="feed-title">All posts</h2><p>Find study partners with shared goals</p></div><span id="results-label" class="results-label">— requests</span></div>
+      <div class="filter-row"><label class="search-box"><span>⌕</span><input type="search" id="search-input" placeholder="Search subjects and posts..." maxlength="100" aria-label="Search posts"></label><select id="subject-filter" aria-label="Subject"><option value="">All subjects</option></select><select id="category-filter" aria-label="Category"><option value="">All categories</option><option value="project">Projects</option><option value="group">Group work</option><option value="midterm">Midterms</option><option value="endterm">Endterms</option><option value="homework">Homework</option><option value="study">Study together</option></select><label class="deadline-filter-label" for="deadline-filter">Due by <input type="date" id="deadline-filter" aria-label="Filter by deadline"></label></div>
+    </div><div id="content-list" class="post-list"></div></div></div>
+  </div></section>
+</main>
+<footer class="footer"><div class="container footer-inner"><span><span class="footer-symbol">✳</span> study<span class="brand-accent">mate</span> <small>© 2026 · AITU Student Project</small></span><span>Made for studying together <span class="heart">♥</span></span><label class="sound-toggle"><input id="notification-sounds" type="checkbox"> Notification sounds <span class="sound-description">(optional)</span></label></div></footer>
+<div id="modal-overlay" class="modal-overlay" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button id="modal-close" class="modal-close" aria-label="Close">×</button><div id="modal-content"></div></div></div>
+<div class="toast-area" id="toast-area" role="status" aria-live="polite"></div>
+<script src="/app.js" defer></script></body></html>
