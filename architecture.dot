@@ -1,0 +1,18 @@
+digraph ARC {
+ graph [bgcolor="white",rankdir=TB, pad="0.35",nodesep="0.55",ranksep="0.58",fontname="DejaVu Sans",fontsize=12,compound=true];
+ node [shape=box,style="filled,rounded",fontname="DejaVu Sans",fontsize=13,margin="0.25,0.16",color="#dedff1",penwidth=1.1];
+ edge [color="#6260bb",fontsize=11,fontname="DejaVu Sans",penwidth=1.7];
+ browser [label="STUDENT BROWSER\nHTML / CSS / JavaScript\nAITU email registration",fillcolor="#f1f0ff"];
+ subgraph cluster_boundary {
+  label="APPLICATION SERVER — private authenticated boundary";
+  style="rounded,dashed";color="#aaa5ed";fontcolor="#5553cc";
+  backend [label="Python HTTP API\nValidation / session / CSRF\nAuthorization / rate limit",fillcolor="#ebeaff"];
+  sqldb [label="SQLite — private disk\nusers / subjects / posts\napplications / audit_logs",fillcolor="#e6f7f1"];
+  backup [label="SQLite backup()\nlocal backup .sqlite",fillcolor="#fff0e4"];
+  backend -> sqldb [label="parameterized SQL"]; sqldb -> backup [label="consistent snapshot"];
+ }
+  smtp [label="SMTP relay (production)\n6-digit email code",fillcolor="#fff0e4"];
+  browser -> backend [label="HTTPS/TLS in production\nHttpOnly session cookie"];
+  backend -> smtp [label="STARTTLS"];
+  smtp -> browser [label="email code",style=dashed];
+}
