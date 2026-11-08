@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+.local_session_secret
+*.sqlite
+*.sqlite-*
+private-data/
+__pycache__/
+*.pyc
+certs/*.pem
+server_backup.py
